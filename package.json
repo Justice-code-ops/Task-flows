@@ -1,0 +1,13 @@
+{
+  "name": "to-do-app",
+  "version": "1.0.0",
+  "description": "Stay Organized. Stay Productive",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "T.G Codes",
+  "license": "ISC"
+}

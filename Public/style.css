@@ -1,0 +1,219 @@
+body {
+    font-family: "Happy Monkey", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #e0e0e0;
+    margin: 100px 0 0 0;
+    padding: 0;
+}
+/* h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 50px;
+} */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #f8f8f8;
+    width: 100%;
+    height: 60px;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-left: 20px;
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: 20px;
+    padding: 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+.links-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: 0.3s all ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #ffffffff;
+    background-color: #3128a7ff;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.highlight {
+    font-size: 30px;
+    font-weight: bold;
+    color: #555;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.app-container {
+    width: 500px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#task-input {
+    width: 70%;
+    padding: 10px;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+.input-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task-button {
+    padding: 10.8px;
+    font-size: 16px;
+    margin-left: 5px;
+    cursor: pointer;
+    background-color: #a72852ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.task-button:active {
+    background-color: #7a1f3dff;
+}
+
+.list-container {
+    margin: 10px;
+    background: #f9f9f9;
+    padding: 4px;
+    border-radius: 6px;
+}
+
+.task-list {
+    padding: 0;
+    font-size: 18px;
+    font-family: inherit;
+}
+
+.task-list li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.task-list li button {
+    padding: 6px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.task-list li button:active {
+    background-color: #cc0000;
+}
+
+.footer {
+    text-align: center;
+    margin: 20px auto 0 auto;
+    color: #777;
+    font-size: 14px;
+}
+
+li {
+    position: relative;
+    list-style: none;
+}
+
+.get-started-button {
+    padding: 10px 20px;
+    background-color: #371397ff;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.get-started-button:hover {
+    background-color: #3128a7ff;
+    transform: scale(1.05);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    min-width: 123px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #31278bff;
+}
+
+li:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
