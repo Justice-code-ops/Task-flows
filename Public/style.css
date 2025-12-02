@@ -6,11 +6,16 @@ body {
     margin: 100px 0 0 0;
     padding: 0;
 }
-/* h1 {
-    text-align: center;
-    color: #333;
-    margin-top: 50px;
-} */
+
+.info {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    box-shadow: 10px 10px 3px black;
+}
 
 .navbar {
     position: fixed;
