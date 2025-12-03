@@ -495,31 +495,70 @@ li:hover .dropdown-menu {
 @media (max-width: 768px) {
 
     body {
-        padding: 80px 10px 20px 10px;
+        padding: 70px 10px 20px 10px;
     }
 
-    /* NAVBAR */
+    /* NAVBAR - Compact mobile design */
     .navbar {
-        flex-direction: column;
         height: auto;
-        padding: 10px;
-        text-align: center;
+        padding: 8px;
+        flex-wrap: wrap;
+        gap: 10px;
     }
 
     .nav-logo {
         margin-left: 0;
-        margin-bottom: 5px;
+        font-size: 18px;
+        flex: 1;
+        text-align: left;
+    }
+
+    .nav-logo h2 {
+        margin: 0;
+        font-size: 18px;
     }
 
     .nav-links {
-        flex-direction: column;
-        gap: 10px;
+        flex: 1;
+        gap: 8px;
         padding: 0;
+        margin-left: 0;
+        min-width: 100%;
     }
 
     .links-list {
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: flex-start;
+    }
+
+    .links-list li {
+        margin: 0;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+        padding: 6px 8px;
+        display: inline-block;
+    }
+
+    .nav-links a:hover {
+        padding: 6px 8px;
+    }
+
+    .get-started-button {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+
+    .dropdown-menu {
+        min-width: 100px;
+        font-size: 13px;
+    }
+
+    .dropdown-menu li a {
+        padding: 8px 10px;
     }
 
     /* MAIN INFO SECTION */
@@ -609,5 +648,72 @@ li:hover .dropdown-menu {
 
     .xtra-info p {
         font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Extra small screens - additional navbar compression */
+    body {
+        padding: 65px 8px 20px 8px;
+    }
+
+    .navbar {
+        padding: 6px;
+        height: auto;
+    }
+
+    .nav-logo {
+        font-size: 16px;
+    }
+
+    .nav-logo h2 {
+        font-size: 16px;
+    }
+
+    .links-list {
+        gap: 6px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+        padding: 4px 6px;
+    }
+
+    .get-started-button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .headline {
+        font-size: 20px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .feature-icon {
+        font-size: 36px;
+    }
+
+    .feature-card h3 {
+        font-size: 16px;
+    }
+
+    .feature-card p {
+        font-size: 13px;
+    }
+
+    .xtra-info h1 {
+        font-size: 24px;
+    }
+
+    .xtra-info p {
+        font-size: 14px;
+    }
+
+    .xtra-info button {
+        padding: 10px 20px;
+        font-size: 14px;
     }
 }
