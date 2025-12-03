@@ -684,10 +684,15 @@ li:hover .dropdown-menu {
         font-size: 12px;
     }
 
-    .button-container,
-    .feature-card,
-    .review-card {
+    .button-container {
         width: 70%;
+        box-sizing: border-box;
+        margin: auto;
+    }
+
+     .feature-card,
+    .review-card {
+        width: 100%;
         box-sizing: border-box;
         margin: auto;
     }
