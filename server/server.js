@@ -11,7 +11,7 @@ const PORT = 5000;
 
 const server = http.createServer((req, res) => {
     
-    let filePath = path.join(__dirname, '..', 'public', req.url === '/' ? 'index.html' : req.url);
+    let filePath = path.join(__dirname, '..', 'Public', req.url === '/' ? 'index.html' : req.url);
     let extname = path.extname(filePath)
     let contentType = getContentType(extname)
     
