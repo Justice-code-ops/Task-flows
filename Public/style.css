@@ -684,7 +684,9 @@ li:hover .dropdown-menu {
         font-size: 12px;
     }
 
-    .button-container {
+    .button-container,
+    .feature-card,
+    .review-card {
         width: 70%;
         box-sizing: border-box;
         margin: auto;
