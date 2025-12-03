@@ -658,6 +658,9 @@ li:hover .dropdown-menu {
     }
 
     .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         padding: 6px;
         height: auto;
     }
