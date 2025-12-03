@@ -488,3 +488,126 @@ li:hover .dropdown-menu {
     margin: 0;
     line-height: 1.5;
 }
+
+/* ================================
+   MOBILE RESPONSIVE DESIGN
+   ================================ */
+@media (max-width: 768px) {
+
+    body {
+        padding: 80px 10px 20px 10px;
+    }
+
+    /* NAVBAR */
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .nav-logo {
+        margin-left: 0;
+        margin-bottom: 5px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+    }
+
+    .links-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* MAIN INFO SECTION */
+    .info {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .headline-section,
+    .todo {
+        width: 100%;
+    }
+
+    .headline {
+        width: 100%;
+        font-size: 24px;
+    }
+
+    .description {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    /* SEARCH BAR */
+    #search-task {
+        width: 100%;
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    #search-button {
+        width: 100%;
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    .todo {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* BUTTON AREA */
+    .button-container {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    #account-button,
+    #demo-button {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    /* FEATURE CARDS & MANAGEMENT SECTION */
+    .management-container {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .feature-card {
+        width: 100%;
+    }
+
+    /* REVIEW CARDS */
+    .review-container {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .review-card {
+        width: 100%;
+    }
+
+    /* EXTRA INFO PANEL */
+    .xtra-info {
+        padding: 40px 20px;
+    }
+
+    .xtra-info h1 {
+        font-size: 28px;
+    }
+
+    .xtra-info p {
+        font-size: 16px;
+    }
+}
