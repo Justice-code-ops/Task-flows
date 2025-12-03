@@ -3,20 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DashBoard</title>
+    <title>Task Flow - Dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="todo.css">
 </head>
 <body>
-    <div class="app-container">
-        <div class="input-section">
-            <input type="text" id="task-input" placeholder="Enter a New Task" />
-            <button class="task-button">➕ Add Task</button>
+    <nav class="navbar">
+        <div class="nav-logo">
+            <h2>Task Flow</h2>
         </div>
+        <div class="nav-links">
+            <ul class="links-list">
+                <li><a href="/">Home</a></li>
+                <li><a href="todo.html">DashBoard</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Features</a><li>
+                <li>
+                    <button class="get-started-button" aria-expanded="false">
+                        Get Started
+                    </button>
+                    <ul class="dropdown-menu" aria-label="Get Started">
+                        <li><a href="#">Sign Up</a></li>
+                        <li><a href="#">Login</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-        <div class="list-container">
-            <ul class="task-list"></ul>
-            <!--<button class="task-button">Remove</button>
-            <button class="task-button">Completed</button>-->
+    <div class="todo-page-container">
+        <div class="app-container">
+            <div class="app-header">
+                <h1>My Tasks</h1>
+                <p class="task-count"><span id="task-count">0</span> tasks</p>
+            </div>
+
+            <div class="search-section">
+                <input type="text" id="search-input" class="search-input" placeholder="Search tasks..." />
+            </div>
+
+            <div class="input-section">
+                <input type="text" id="task-input" placeholder="Enter a new task..." />
+                <button class="task-button" id="add-btn">➕ Add Task</button>
+            </div>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+
+            <div class="list-container">
+                <ul class="task-list" id="task-list"></ul>
+                <div class="empty-state" id="empty-state">
+                    <p>No tasks yet. Add one to get started! 🚀</p>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="clear-btn" id="clear-completed-btn">Clear Completed</button>
+            </div>
+        </div>
     </div>
 
     <footer class='footer'>
@@ -24,7 +71,6 @@
         <p>&copy; <span id="date"></span> All Rights Reserved!</p>
     </footer>
 
-    <script src="index.js"></script>
+    <script src="todo.js"></script>
 </body>
 </html>
-
