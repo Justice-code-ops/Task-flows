@@ -684,6 +684,12 @@ li:hover .dropdown-menu {
         font-size: 12px;
     }
 
+    .button-container {
+        width: 70%;
+        box-sizing: border-box;
+        margin: auto;
+    }
+
     .headline {
         font-size: 20px;
     }
