@@ -63,41 +63,72 @@ body::before {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 0;
     width: 50%;
-    padding: 2px;
+    padding: 0;
     flex: 1;
+    background: white;
+    border-radius: 50px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.todo:hover,
+.todo:focus-within {
+    box-shadow: 0 12px 40px rgba(102, 126, 234, 0.25);
 }
 
 #search-task {
-    width: 80%;
+    flex: 1;
     border: none;
-    padding: 20px 20px;
-    border-radius: 15px;
+    padding: 14px 24px;
+    border-radius: 50px 0 0 50px;
     outline: none;
     font-family: inherit;
-    font-size: 18px;
-    font-weight: bold;
-    box-shadow: 0 0 3px black;
+    font-size: 16px;
+    font-weight: 500;
+    background: #48484eff;
+    color: #1f1e1eff;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 13px black;
     box-sizing: border-box;
+}
+
+#search-task::placeholder {
+    color: #b0aef3ff;
+    font-weight: 400;
+}
+
+#search-task:focus {
+    background: rgba(102, 126, 234, 0.05);
 }
 
 #search-button {
     border: none;
-    border-radius: 15px;
-    padding: 20px;
-    background: #191a75ff;
-    color: #ffffffff;
+    border-radius: 0 50px 50px 0;
+    padding: 14px 28px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
     font-family: inherit;
     font-size: 16px;
+    font-weight: 600;
     text-align: center;
-    box-shadow: 0 0 3px black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    text-align: center;
+    box-shadow: 0 0 10px black;
     transition: 0.2s ease;
 }
 
 #search-button:hover {
-    background: #040042ff;
-    color: #ffffffff;
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    transform: translateY(-2px);
+}
+
+#search-button:active {
+    transform: translateY(0);
 }
 
 .button-container {
@@ -204,85 +235,6 @@ body::before {
     text-align: center;
     margin-bottom: 15px;
 }
-
-/* TODO: Moved to todo.css */
-/* .app-container {
-    width: 500px;
-    margin: 20px auto;
-    background: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-#task-input {
-    width: 70%;
-    padding: 10px;
-    font-family: "Inter", sans-serif;
-    font-size: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    outline: none;
-}
-
-.input-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.task-button {
-    padding: 10.8px;
-    font-size: 16px;
-    margin-left: 5px;
-    cursor: pointer;
-    background-color: #a72852ff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-.task-button:active {
-    background-color: #7a1f3dff;
-}
-
-.list-container {
-    margin: 10px;
-    background: #f9f9f9;
-    padding: 4px;
-    border-radius: 6px;
-}
-
-.task-list {
-    padding: 0;
-    font-size: 18px;
-    font-family: inherit;
-}
-
-.task-list li {
-    padding: 10px;
-    border-bottom: 1px solid #eee;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
-}
-
-.task-list li button {
-    padding: 6px 10px;
-    font-size: 14px;
-    cursor: pointer;
-    background-color: #ff4d4d;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-.task-list li button:active {
-    background-color: #cc0000;
-} */
 
 .footer {
     text-align: center;
@@ -587,19 +539,25 @@ li:hover .dropdown-menu {
     /* SEARCH BAR */
     #search-task {
         width: 100%;
-        padding: 15px;
-        font-size: 16px;
+        padding: 12px 20px;
+        font-size: 14px;
+        border-radius: 50px;
     }
 
     #search-button {
         width: 100%;
-        padding: 15px;
-        font-size: 16px;
+        padding: 12px 20px;
+        font-size: 14px;
+        border-radius: 50px;
+        margin-top: 5px;
     }
 
     .todo {
         flex-direction: column;
-        gap: 15px;
+        gap: 5px;
+        border-radius: 50px;
+        background: transparent;
+        box-shadow: none;
     }
 
     /* BUTTON AREA */
