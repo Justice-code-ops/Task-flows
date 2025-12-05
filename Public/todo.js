@@ -11,14 +11,13 @@ const date = dateEl.textContent = new Date().getFullYear()
 
 btnEl.addEventListener('click', function() {
     const task = inputEl.value.trim()
-    let count = null
 
     if (!task) {
         return alert('Please add a task')
     } else {
         const li = document.createElement('li')
         const span = document.createElement('span')
-        const input = document.createElement('input')
+        const checkbox = document.createElement('input')
         const button = document.createElement('button')
 
         //set up the elements
@@ -26,15 +25,22 @@ btnEl.addEventListener('click', function() {
         span.classList.add('task-text')
         button.textContent = 'Delete'
         button.classList.add('delete-btn')
+        checkbox.type = "checkbox"
+        checkbox.classList.add('task-checkbox')
 
         //Append Elements to list
         li.appendChild(span)
         li.appendChild(button)
+        li.appendChild(checkbox)
 
         //Append li to listEl
         listEl.appendChild(li)
 
         //update task count
-        countEl.textContent = count++
+        countEl.textContent = listEl.children.length()
+
+        checkbox.addEventListener('change', function() {
+            li.classList.toggle('completed')
+        })
     }
 })
