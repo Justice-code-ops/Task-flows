@@ -39,6 +39,9 @@ btnEl.addEventListener('click', function() {
 
             //update task count
             countEl.textContent = listEl.children.length
+
+            //update empty-task
+            updateEmptyEL()
         })
         //Append Elements to list
         li.appendChild(checkbox)
@@ -51,10 +54,19 @@ btnEl.addEventListener('click', function() {
         //update task count
         countEl.textContent = listEl.children.length
 
+        //hide empty-task
+        updateEmptyEL()
+
         //clear the input
         inputEl.value = ''
-
-
     }
 })
+
+function updateEmptyEL() {
+    if(listEl.children.length === 0) {
+        emptyEL.style.display = 'block'
+    } else{
+        emptyEL.style.display = 'none'
+    }
+} 
 

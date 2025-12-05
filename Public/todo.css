@@ -152,6 +152,32 @@
     gap: 8px;
 }
 
+#all-tasks,
+#active-tasks,
+#completed-tasks {
+    background: #667eea;
+    color: white;
+    padding: 8px;
+    border: none;
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 16px;
+    transition: 0.2s ease
+}
+
+#all-tasks:hover,
+#active-tasks:hover,
+#completed-tasks:hover {
+    background: #193cdaff;
+    color :white;
+}
+
+#all-tasks:active,
+#active-tasks:active,
+#completed-tasks:active {
+    background: #3352ddff;;
+}
+
 .delete-btn {
     padding: 8px 14px;
     font-size: 14px;
