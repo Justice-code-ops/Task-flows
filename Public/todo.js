@@ -31,7 +31,15 @@ btnEl.addEventListener('click', function() {
         checkbox.addEventListener('change', function() {
             li.classList.toggle('completed')
         })
+        
+        //Set the delete function
+        button.addEventListener('click', function() {
+            const taskItem = this.closest('li')
+            taskItem.remove()
 
+            //update task count
+            countEl.textContent = listEl.children.length
+        })
         //Append Elements to list
         li.appendChild(checkbox)
         li.appendChild(span)
@@ -42,6 +50,11 @@ btnEl.addEventListener('click', function() {
 
         //update task count
         countEl.textContent = listEl.children.length
+
+        //clear the input
+        inputEl.value = ''
+
+
     }
 })
 

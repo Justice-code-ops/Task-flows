@@ -129,7 +129,7 @@
 
 .task-content {
     display: flex;
-    align-items: center;
+    align-items: start;
     gap: 14px;
     flex: 1;
 }
@@ -294,7 +294,7 @@
     }
 
     .task-list li {
-        padding: 12px;
+        padding: 20px;
         font-size: 14px;
     }
 
