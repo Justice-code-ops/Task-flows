@@ -21,26 +21,27 @@ btnEl.addEventListener('click', function() {
         const button = document.createElement('button')
 
         //set up the elements
+        checkbox.classList.add('task-checkbox')
+        checkbox.type = "checkbox"
         span.textContent = task;
         span.classList.add('task-text')
         button.textContent = 'Delete'
         button.classList.add('delete-btn')
-        checkbox.type = "checkbox"
-        checkbox.classList.add('task-checkbox')
+        
+        checkbox.addEventListener('change', function() {
+            li.classList.toggle('completed')
+        })
 
         //Append Elements to list
+        li.appendChild(checkbox)
         li.appendChild(span)
         li.appendChild(button)
-        li.appendChild(checkbox)
 
         //Append li to listEl
         listEl.appendChild(li)
 
         //update task count
-        countEl.textContent = listEl.children.length()
-
-        checkbox.addEventListener('change', function() {
-            li.classList.toggle('completed')
-        })
+        countEl.textContent = listEl.children.length
     }
 })
+
